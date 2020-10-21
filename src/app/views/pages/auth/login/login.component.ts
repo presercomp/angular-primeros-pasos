@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  returnURL: any;
+
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.returnURL = this.route.snapshot.queryParams['returnUrl'] || '/';
+  }
+
+  onLoggedin(e) {
+    e.preventDefault();
+    localStorage.setItem('isLoggedin', 'true');
+    if (localStorage.getItem('isLoggedin')){
+      this.router.navigate([this.returnURL]);
+    }
   }
 
 }
