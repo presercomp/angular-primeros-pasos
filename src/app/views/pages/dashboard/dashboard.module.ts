@@ -12,8 +12,8 @@ const routes: Routes = [
   declarations: [DashboardComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
-    FormsModule
+    FormsModule,
+    RouterModule.forChild(routes)
   ]
 })
 export class DashboardModule { }

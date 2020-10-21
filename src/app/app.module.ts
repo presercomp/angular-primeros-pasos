@@ -11,6 +11,7 @@ import { CancelComponent } from './views/pages/cancel/cancel.component';
 import { ConfigComponent } from './views/pages/config/config.component';
 import { DevicesComponent } from './views/pages/devices/devices.component';
 import { UserComponent } from './views/pages/user/user.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { UserComponent } from './views/pages/user/user.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule
