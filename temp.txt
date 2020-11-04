@@ -1,9 +1,9 @@
 - Login                                        (/)
--- Panel de control                            (/dashboard)
----- Historial de Boletas Emitidas             (/history)
----- Emitir Boletas                            (/add)
----- Anular Boletas                            (/cancel/{:num_boleta})
----- Configurar Información de Empresa         (/config)
----- Administrar conexiones de dispositivos    (/devices)
----- Administrar datos de usuario              (/user)
----- Cerrar Sesión                             (/auth/logout)
+-- Panel de control                            (/dashboard)            TODO
+---- Historial de Boletas Emitidas             (/history)              TODO
+---- Emitir Boletas                            (/add)                  TODO
+---- Anular Boletas                            (/cancel/{:num_boleta}) TODO
+---- Configurar Información de Empresa         (/config)               TODO
+---- Administrar conexiones de dispositivos    (/devices)              TODO 
+---- Administrar datos de usuario              (/user)                 TODO
+---- Cerrar Sesión                             (/auth/logout)          OK

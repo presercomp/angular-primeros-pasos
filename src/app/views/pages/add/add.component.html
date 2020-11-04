@@ -1,1 +1,42 @@
-<p>add works!</p>
+<div class="content-wrapper">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="informacion">
+                <input type="number" name="pantalla" id="pantalla" readonly="readonly" class="pantalla text-right" [(ngModel)]="valorPantalla">
+                <div class="row">
+                    <div class="col-md-3"><input type="number" name="factor" id="factor" class="pantalla text-center" readonly="readonly" [(ngModel)]="factorMultiplicacion"></div>
+                    <div class="col-md-1 text-center ex">X</div>
+                    <div class="col-md-8"><input type="number" name="valor" id="valor" class="pantalla text-right" readonly="readonly" [(ngModel)]="valorMultiplicacion"></div>
+                </div>
+            </div>
+            <div class="botonera">
+                <div class="row">
+                    <div class="col-md-3"><button id="btn_7" (click)="botonera(7)" class="btn-primary btn-circle">7</button></div>
+                    <div class="col-md-3"><button id="btn_8" (click)="botonera(8)" class="btn-primary btn-circle">8</button></div>
+                    <div class="col-md-3"><button id="btn_9" (click)="botonera(9)" class="btn-primary btn-circle">9</button></div>
+                    <div class="col-md-3"><button id="btn_C" (click)="corregir()" class="btn-primary btn-circle"><i class="fa fa-chevron-left"></i></button></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><button id="btn_4" (click)="botonera(4)" class="btn-primary btn-circle">4</button></div>
+                    <div class="col-md-3"><button id="btn_5" (click)="botonera(5)" class="btn-primary btn-circle">5</button></div>
+                    <div class="col-md-3"><button id="btn_6" (click)="botonera(6)" class="btn-primary btn-circle">6</button></div>
+                    <div class="col-md-3"><button id="btn_D" (click)="borrar()" class="btn-primary btn-circle"><i class="fa fa-copyright"></i></button></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><button id="btn_1" (click)="botonera(1)" class="btn-primary btn-circle">1</button></div>
+                    <div class="col-md-3"><button id="btn_2" (click)="botonera(2)" class="btn-primary btn-circle">2</button></div>
+                    <div class="col-md-3"><button id="btn_4" (click)="botonera(3)" class="btn-primary btn-circle">3</button></div>
+                    <div class="col-md-3"><button id="btn_X" (click)="multiplicar()" class="btn-primary btn-circle"><i class="fa fa-times"></i></button></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><button id="btn_0" (click)="botonera(0)" class="btn-primary btn-circle">0</button></div>
+                    <div class="col-md-3"><button id="btn_M" (click)="tripleCero()" class="btn-primary btn-circle">000</button></div>
+                    <div class="col-md-3"><button id="btn_P" (click)="imprimir()" class="btn-primary btn-circle"><i class="fa fa-print"></i></button></div>
+                    <div class="col-md-3"><button id="btn_A" (click)="sumar()" class="btn-primary btn-circle"><i class="fa fa-plus"></i></button></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
