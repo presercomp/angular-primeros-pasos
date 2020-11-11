@@ -7,3 +7,15 @@
 ---- Administrar conexiones de dispositivos    (/devices)              TODO 
 ---- Administrar datos de usuario              (/user)                 TODO
 ---- Cerrar Sesión                             (/auth/logout)          OK
+
+https://github.com/presercomp/angular-primeros-pasos
+
+ACTIVIDADES 04/11/2020:
+- Crear tabla de Historial de Boletas (Fecha - Num. Boleta - Monto - Acciones)
+- Agregar otros accesos al menu (Emitir, Anular, Configurar, Admin. Conexiones, Admin Datos)
+
+ACTIVIDADES 11/11/2020:
+- Crear área de administración de empresa 
+   Formulario con los campos RUT, Razon Social, Giro, Dirección, Telefono, Actividad Económica
+- Crear área de administración de equipos
+   Formulario similar a Historial de boleta con los siguiente campos: Fecha conexion, IP, S.Operativo, Accciones

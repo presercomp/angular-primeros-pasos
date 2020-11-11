@@ -26,7 +26,7 @@
           <li class="nav-header">MENU</li>
           <li class="nav-item">
             <a routerLink="/" routerLinkActive="active" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Panel de control</p>
             </a>
           </li>
@@ -36,7 +36,30 @@
               <p>Historial de Boletas</p>
             </a>
           </li>
-          
+          <li class="nav-item">
+            <a [routerLink]="['/add']" class="nav-link">
+              <i class="nav-icon fas fa-print"></i>
+              <p>Emitir Boletas</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/config']" class="nav-link">
+              <i class="nav-icon fas fa-building"></i>
+              <p>Configurar información Empresa</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/devices']" class="nav-link">
+              <i class="nav-icon fas fa-mobile-alt"></i>
+              <p>Admin. Dispositivos</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]="['/user']" class="nav-link">
+              <i class="nav-icon fas fa-user-friends"></i>
+              <p>Administrar Usuarios</p>
+            </a>
+          </li>          
 
           <li class="nav-item">
             <a routerLink="/auth/logout" routerLinkActive="active" class="nav-link">
