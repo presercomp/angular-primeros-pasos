@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-devices',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DevicesComponent implements OnInit {
 
-  constructor() { }
+  dispositivos = [];
+  constructor(
+    private http: HttpClient
+  ) {
+    this.getJSON().subscribe(data => {
+      this.dispositivos = data;
+    });
+   }
+
+   public getJSON(): Observable<any> {
+     return this.http.get<Response>('assets/data/devices.json');
+   }
 
   ngOnInit(): void {
+
   }
 
 }

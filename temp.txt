@@ -19,3 +19,11 @@ ACTIVIDADES 11/11/2020:
    Formulario con los campos RUT, Razon Social, Giro, Dirección, Telefono, Actividad Económica
 - Crear área de administración de equipos
    Formulario similar a Historial de boleta con los siguiente campos: Fecha conexion, IP, S.Operativo, Accciones
+
+ACTIVIDADES 18/11/2020:
+- Completar tabla con información de 
+devices.json
+- Crear archivo json para boletas existentes
+- Completar tabla con información de 
+boletas existentes (history)
+- Crear todo el administrador de usuarios (mostrar al menos 5)

@@ -41,7 +41,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                      <tr *ngFor="let i of boletas;">
+                        <td>{{i.fecha | date : 'dd/MM/yyyy'}}</td>
+                        <td>{{i.num_boleta}}</td>
+                        <td>{{i.monto}}</td>
+                        <td></td>
+                      </tr>
                     </tbody>
                 </table>
               </div><!-- /.card-body -->

@@ -12,6 +12,8 @@ import { ConfigComponent } from './views/pages/config/config.component';
 import { DevicesComponent } from './views/pages/devices/devices.component';
 import { UserComponent } from './views/pages/user/user.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -20,9 +22,11 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     LayoutModule
   ],
   providers: [],
