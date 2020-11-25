@@ -32,27 +32,27 @@
               <div class="card-body">
                 <div class="form-group">
                   <label for="rut">R.U.T.</label>
-                  <input type="text" class="form-control" id="rut" placeholder="00.000.000-0">
+                  <input type="text" class="form-control" id="rut" name="rut" [(ngModel)]="empresa.rut" placeholder="00.000.000-0">
                 </div>
                 <div class="form-group">
                   <label for="razon_social">Razón Social</label>
-                  <input type="text" class="form-control" id="razon_social" placeholder="">
+                  <input type="text" class="form-control" id="razon_social" name="razon_social" [(ngModel)]="empresa.razon_social" placeholder="">
                 </div>
                 <div class="form-group">
                     <label for="giro">Giro</label>
-                   <input type="text" class="form-control" id="giro" placeholder="">
+                   <input type="text" class="form-control" id="giro" name="giro" [(ngModel)]="empresa.giro" placeholder="">
                 </div>
                 <div class="form-group">
                     <label for="direccion">Direccion</label>
-                    <input type="text" class="form-control" id="direccion" placeholder="">
+                    <input type="text" class="form-control" id="direccion" name="direccion" [(ngModel)]="empresa.direccion" placeholder="">
                   </div>
                   <div class="form-group">
                     <label for="telefono">Teléfono</label>
-                    <input type="text" class="form-control" id="telefono" placeholder="">
+                    <input type="text" class="form-control" id="telefono" name="telefono" [(ngModel)]="empresa.telefono" placeholder="">
                   </div>
                 <div class="form-group">
                       <label for="actividad_economica">Actvidad Económica</label>
-                    <input type="text" class="form-control" id="actividad_economica" placeholder="">
+                    <input type="text" class="form-control" id="actividad_economica" name="actividad_economica" [(ngModel)]="empresa.actividad_economica" placeholder="">
                   </div>
               </div>
               <!-- /.card-body -->

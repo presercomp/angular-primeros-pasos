@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './core/auth/auth.guard';
@@ -18,15 +19,17 @@ const routes: Routes = [
     { path: 'add', component: AddComponent},
     { path: 'cancel', component: CancelComponent},
     { path: 'config', component: ConfigComponent},
-    { path: 'devices', component: DevicesComponent},
     { path: 'user', component: UserComponent},
+    { path: 'devices', component: DevicesComponent},
     { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
   ]},
   { path: 'error', component: ErrorPageComponent, data: { 'type': 404, 'title': 'Página no encontrada'}}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'top'})],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'top'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

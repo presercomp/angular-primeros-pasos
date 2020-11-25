@@ -27,3 +27,9 @@ devices.json
 - Completar tabla con información de 
 boletas existentes (history)
 - Crear todo el administrador de usuarios (mostrar al menos 5)
+
+ACTIVIDADES 25/11/2020
+- Crear archivo json con información de la empresa y desplegarlo en el formulario correspondiente
+(config)
+- Crear archivo json con información de usuarios y desplegarlo en su correspondiente administrador 
+(user)

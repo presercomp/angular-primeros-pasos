@@ -1,1 +1,60 @@
-<p>user works!</p>
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Administración de Usuarios</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Panel</a></li>
+            <li class="breadcrumb-item active">Admin. usuarios</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.content-header -->
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Main row -->
+      <div class="row">
+        <!-- Left col -->
+        <section class="col-lg-12">
+          <!-- Custom tabs (Charts with tabs)-->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <i class="fas fa-users mr-1"></i>
+                Administración de usuarios
+              </h3>
+            </div><!-- /.card-header -->
+            <div class="card-body">
+              <table class="table table-striped">
+                  <thead>
+                      <tr>
+                         <th>ID</th>
+                         <th>Apodo</th>
+                         <th>Correo Electrónico</th>
+                         <th>Acciones</th> 
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let u of usuarios;">
+                      <td>{{u.id}}</td>
+                      <td>{{u.apodo}}</td>
+                      <td>{{u.correo}}</td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+              </table>
+            </div><!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </section>
+        <!-- /.Left col -->
+      </div>
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+  </section>

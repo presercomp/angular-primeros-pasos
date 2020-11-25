@@ -21,6 +21,7 @@ const routes: Routes = [
     AddComponent,
     CancelComponent,
     ConfigComponent,
+    UserComponent,
     DevicesComponent],
   imports: [
     CommonModule,

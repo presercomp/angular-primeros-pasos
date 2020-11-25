@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-config',
@@ -7,8 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigComponent implements OnInit {
 
-  constructor() { }
+  empresa = null;
+  constructor(
+    private http: HttpClient
+  ) {
+      this.getJSON().subscribe(data => {
+        this.empresa = data;
+      });
+   }
 
+  public getJSON(): Observable<any>{
+    return this.http.get<Response>('assets/data/company.json');
+  }
   ngOnInit(): void {
   }
 
