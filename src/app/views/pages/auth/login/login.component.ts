@@ -1,3 +1,4 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -9,13 +10,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   returnURL: any;
-
-  constructor(private router: Router, private route: ActivatedRoute) { }
-
-  autorizado = {
-    usuario : 'admin',
-    clave   : 'admin'
-  };
+  reqHeader: HttpHeaders;
+  constructor(private router: Router, private route: ActivatedRoute, private http: HttpClient) { 
+    this.reqHeader = new HttpHeaders({
+      'Content-Type' : 'application/json'
+    });
+  }
 
   formulario = {
     usuario : '',
@@ -26,20 +26,24 @@ export class LoginComponent implements OnInit {
     this.returnURL = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
-  onLoggedin(e) {
+  async onLoggedin(e) {
     e.preventDefault();
-    console.log(this.formulario, this.autorizado);
-    if (this.formulario.usuario.length === 0 || this.formulario.clave.length === 0){
+    let usuario = this.formulario.usuario;
+    let clave   = this.formulario.clave;
+    if (usuario.length === 0 || clave.length === 0) {
       alert("Complete el fomulario con sus credenciales");
-    } else if (this.formulario.usuario === this.autorizado.usuario && this.formulario.clave === this.autorizado.clave){
-      localStorage.setItem('isLoggedin', 'true');
-      if (localStorage.getItem('isLoggedin')){
-        this.router.navigate([this.returnURL]);
-      }
     } else {
-      alert("Nombre de usuario y/o clave incorrecto");
+      const result = await this.http.post<Request>('/APIRest/ingreso', {usuario, clave}, {headers: this.reqHeader, observe: 'response'}).toPromise();
+      console.log(result);
+      if(result.status == 200) {
+        localStorage.setItem('isLoggedin', 'true');
+        if (localStorage.getItem('isLoggedin')){
+          this.router.navigate([this.returnURL]);
+        }
+      } else {
+        alert("Nombre de usuario y/o clave incorrecto");
+      }
     }
-    
   }
 
 }
